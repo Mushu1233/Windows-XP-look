@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О программе — XpSheel.ru · Windows XP Look</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="desktop">
+  <div class="nav">
+    <a href="index.html">Главная</a>
+    <a href="program.html" class="active">О программе</a>
+    <a href="version.html">Версия</a>
+    <a href="WindowsXP-Look.zip" download="WindowsXP-Look.zip">Скачать</a>
+  </div>
+
+  <div class="window">
+    <div class="titlebar">
+      <div class="title">🪟 О программе</div>
+      <div class="btns">
+        <span class="btnXp" style="width:20px;text-align:center">—</span>
+        <span class="btnXp" style="width:20px;text-align:center">▢</span>
+        <span class="btnXp" style="width:22px;text-align:center;background:linear-gradient(180deg,#f5a9a0,#e06c5c)">✕</span>
+      </div>
+    </div>
+    <div class="tb"></div>
+    <div class="content">
+      <img class="icon" src="start-button-xp.png" alt="Кнопка Пуск XP">
+      <h1 style="margin-top:6px">О программе Windows XP Look</h1>
+      <div class="clear"></div>
+
+      <p>
+        <strong>Windows XP Look</strong> — это бесплатная утилита, которая возвращает на ваш
+        компьютер легендарное оформление операционной системы Windows XP.
+        Программа сделана для тех, кто скучает по классическому виду или хочет
+        удивить друзей ретро-дизайном на современном Windows.
+      </p>
+
+      <h2>Из чего состоит программа</h2>
+      <table class="infotable">
+        <tr><td>🟦 Панель задач</td><td>RetroBar — синяя панель задач с кнопкой «Пуск» как в XP</td></tr>
+        <tr><td>🪟 Меню «Пуск»</td><td>Open-Shell — классическое двухколоночное меню, стили и кнопка XP</td></tr>
+        <tr><td>🖼️ Обои</td><td>Bliss — знаменитые обои Windows XP (зелёный холм, голубое небо)</td></tr>
+        <tr><td>⚙️ Настройки</td><td>Окно в стиле XP: применить вид / вернуть как было</td></tr>
+        <tr><td>📦 Установщик</td><td>install.exe — ставит всё за один клик</td></tr>
+      </table>
+
+      <h2>Что нового и особенности</h2>
+      <ul>
+        <li>Полный вид Windows XP в один клик</li>
+        <li>Всё легко вернуть обратно — кнопка «Вернуть как было»</li>
+        <li>Работает на Windows 7, 10 и 11 (x64)</li>
+        <li>Готовые стили меню «Пуск» и скины в комплекте</li>
+        <li>Одна PNG кнопки «Пуск» с вашим флагом и надписью start</li>
+      </ul>
+
+      <div class="banner">
+        Программа создана для учебных и развлекательных целей. Все используемые
+        компоненты (RetroBar, Open-Shell) — свободные проекты. Windows XP и Bliss —
+        товарные знаки Microsoft.
+      </div>
+    </div>
+    <div class="statusbar">
+      <span>Готово</span>
+      <span>О программе</span>
+      <span style="margin-left:auto">XpSheel.ru</span>
+    </div>
+  </div>
+
+  <div class="taskbar">
+    <button class="startbtn" onclick="goHome()">
+      <img src="start-button-xp.png" alt="Пуск"> start
+    </button>
+    <div class="clockbox" id="xpclock">—:—</div>
+  </div>
+  <footer>XpSheel.ru · Windows XP Look · сделано для учебных целей</footer>
+</div>
+
+<script>
+  function pad(n){ return n<10?'0'+n:''+n; }
+  function tick(){ var d=new Date(); document.getElementById('xpclock').textContent = pad(d.getHours())+':'+pad(d.getMinutes()); }
+  tick(); setInterval(tick,1000);
+  function goHome(){ location.href='index.html'; }
+</script>
+</body>
+</html>

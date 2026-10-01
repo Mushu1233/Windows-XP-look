@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Версия — XpSheel.ru · Windows XP Look</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="desktop">
+  <div class="nav">
+    <a href="index.html">Главная</a>
+    <a href="program.html">О программе</a>
+    <a href="version.html" class="active">Версия</a>
+    <a href="WindowsXP-Look.zip" download="WindowsXP-Look.zip">Скачать</a>
+  </div>
+
+  <div class="window">
+    <div class="titlebar">
+      <div class="title">🪟 Версия программы</div>
+      <div class="btns">
+        <span class="btnXp" style="width:20px;text-align:center">—</span>
+        <span class="btnXp" style="width:20px;text-align:center">▢</span>
+        <span class="btnXp" style="width:22px;text-align:center;background:linear-gradient(180deg,#f5a9a0,#e06c5c)">✕</span>
+      </div>
+    </div>
+    <div class="tb"></div>
+    <div class="content">
+      <h1>Версия программы</h1>
+      <div class="subtitle">Текущая сборка Windows XP Look</div>
+
+      <div class="verbox">
+        <div class="vnum">1.0.18.10.7</div>
+        <div class="vlabel">версия 1.0 · сборка 18.10.07</div>
+      </div>
+
+      <h2>Информация о версии</h2>
+      <table class="infotable">
+        <tr><td>Версия</td><td>1.0.18.10.7</td></tr>
+        <tr><td>Номер сборки</td><td>18.10.07</td></tr>
+        <tr><td>Дата выпуска</td><td>октябрь 2026</td></tr>
+        <tr><td>Платформа</td><td>Windows 7 / 10 / 11 (x64)</td></tr>
+        <tr><td>Разработчик</td><td>Windows XP Look (XpSheel.ru)</td></tr>
+        <tr><td>Лицензия</td><td>Бесплатная, для учебных целей</td></tr>
+      </table>
+
+      <h2>Изменения в этой версии</h2>
+      <ul>
+        <li>Полный вид Windows XP в один клик</li>
+        <li>Окно настроек в стиле XP (применить / вернуть)</li>
+        <li>Готовый установщик install.exe</li>
+        <li>Стили меню «Пуск» и скины (Luna, Metallic, Classic) в комплекте</li>
+        <li>Кнопка «Пуск» Windows XP с флагом и надписью start</li>
+        <li>Сайт проекта на XpSheel.ru</li>
+      </ul>
+
+      <div class="banner">
+        Проверьте, что у вас последняя версия. Скачивайте только с официального сайта XpSheel.ru.
+      </div>
+    </div>
+    <div class="statusbar">
+      <span>Готово</span>
+      <span>Версия 1.0.18.10.7</span>
+      <span style="margin-left:auto">XpSheel.ru</span>
+    </div>
+  </div>
+
+  <div class="taskbar">
+    <button class="startbtn" onclick="goHome()">
+      <img src="start-button-xp.png" alt="Пуск"> start
+    </button>
+    <div class="clockbox" id="xpclock">—:—</div>
+  </div>
+  <footer>XpSheel.ru · Windows XP Look · версия 1.0.18.10.7</footer>
+</div>
+
+<script>
+  function pad(n){ return n<10?'0'+n:''+n; }
+  function tick(){ var d=new Date(); document.getElementById('xpclock').textContent = pad(d.getHours())+':'+pad(d.getMinutes()); }
+  tick(); setInterval(tick,1000);
+  function goHome(){ location.href='index.html'; }
+</script>
+</body>
+</html>
